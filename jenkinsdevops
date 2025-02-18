@@ -1,0 +1,40 @@
+pipeline
+{
+agent none/agent node/agent any
+stages
+stage ('checkout')
+{
+steps
+{
+echo "checking out to git hub repo"
+}
+}
+stage ('build')
+{
+steps
+{
+echo "building the application"
+}
+}
+stage ('sonar')
+{
+steps
+{
+echo "checking the code quality"
+}
+}
+stage ('publish artifacts')
+{
+steps
+{
+echo "pushes the artifacts on to the nexus/jfrog/gcr/ecr"
+}
+}
+stage ('deploy')
+{
+steps
+{
+echo "deploy to tomcat server"
+}
+}
+}
